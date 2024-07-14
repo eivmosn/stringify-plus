@@ -24,12 +24,12 @@ function reviver(key: string, value: any) {
     }
     if (isString(value) && value.startsWith(TYPES.FUNCTION)) {
         const fnString = value.replace(TYPES.FUNCTION, '')
-        return normalizeFunction(key, fnString)
+        return normalize(key, fnString)
     }
     return value
 }
 
-function normalizeFunction(name: string, code: string) {
+function normalize(name: string, code: string) {
     const trimCode = code.trim()
     try {
         // eslint-disable-next-line no-new-func
