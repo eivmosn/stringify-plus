@@ -1,33 +1,39 @@
 {
   "name": "stringify-plus",
   "type": "module",
+  "version": "0.0.2",
   "description": "A lightweight and flexible JSON stringifier",
   "author": "eivmosn",
   "license": "ISC",
-  "keywords": [
-    "json"
-  ],
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest"
+    "test": "vitest",
+    "dev": "tsx src/index.ts",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "simple-git-hooks"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.2",
     "@types/node": "^20.14.10",
+    "ansis": "^3.2.1",
     "eslint": "^9.7.0",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.1.0",
+    "tsx": "^4.16.2",
     "vitest": "^2.0.2"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "node scripts/commit.mjs"
   }
 }
