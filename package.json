@@ -1,7 +1,7 @@
 {
   "name": "stringify-plus",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A lightweight and flexible JSON stringifier",
   "author": "eivmosn",
   "license": "ISC",
