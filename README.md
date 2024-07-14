@@ -1,8 +1,6 @@
 ## Install
-```
-
+```bash
 pnpm install stringify-plus
-
 ```
 
 ## Usage
