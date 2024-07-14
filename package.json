@@ -20,9 +20,8 @@
   ],
   "scripts": {
     "build": "tsup",
-    "test": "vitest",
     "dev": "tsx src/index.ts",
-    "release": "release-it",
+    "release": "pnpm build && release-it",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks"
   },
@@ -34,8 +33,7 @@
     "release-it": "^17.6.0",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.1.0",
-    "tsx": "^4.16.2",
-    "vitest": "^2.0.2"
+    "tsx": "^4.16.2"
   },
   "simple-git-hooks": {
     "commit-msg": "node scripts/commit.mjs"
